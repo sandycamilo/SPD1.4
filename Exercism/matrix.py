@@ -66,23 +66,27 @@
 
 # print('9 8 7\n5 3 2\n6 6 7')
 
+input = '9 8 7\n5 3 2\n6 6 7'
 
 def rows(matrix_str):
     row_count = 0
     row_string = ''
     for char in matrix_str:
-        if char == '':
+        if char == ' ':
             continue
-        row_count += 1 
+        # row_count += 1 
+        print(char,row_count)
         if char == '\n':
             break
         row_count += 1
-    for i in range(1, row_count+1):
+    print(row_count)
+    for i in range(1, row_count +1):
         row_string += '{} '.format(str(i))
     matrix_str = row_string + '\n' + matrix_str
-    return matrix_str
+    print(matrix_str)
 
-    def columns(self, matrix_str):
+    # def columns(matrix_str):
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     rows(input)
