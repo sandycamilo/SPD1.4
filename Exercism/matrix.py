@@ -64,5 +64,25 @@
 # insert counter after \n
 
 
+# print('9 8 7\n5 3 2\n6 6 7')
 
 
+def rows(matrix_str):
+    row_count = 0
+    row_string = ''
+    for char in matrix_str:
+        if char == '':
+            continue
+        row_count += 1 
+        if char == '\n':
+            break
+        row_count += 1
+    for i in range(1, row_count+1):
+        row_string += '{} '.format(str(i))
+    matrix_str = row_string + '\n' + matrix_str
+    return matrix_str
+
+    def columns(self, matrix_str):
+
+if __name__ == '__main__':
+    rows(input)
