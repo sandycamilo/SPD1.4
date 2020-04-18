@@ -48,7 +48,7 @@
 # '\' - indicates where row begins and ends 
 # counter from input 
 
-# write pseudocode:
+# pseudocode:
 
 # rows:
 # set a counter for the number of characters before \n
@@ -66,27 +66,51 @@
 
 # print('9 8 7\n5 3 2\n6 6 7')
 
-input = '9 8 7\n5 3 2\n6 6 7'
+# input = '9 8 7\n5 3 2\n6 6 7'
 
-def rows(matrix_str):
-    row_count = 0
-    row_string = ''
-    for char in matrix_str:
-        if char == ' ':
-            continue
-        # row_count += 1 
-        print(char,row_count)
-        if char == '\n':
-            break
-        row_count += 1
-    print(row_count)
-    for i in range(1, row_count +1):
-        row_string += '{} '.format(str(i))
-    matrix_str = row_string + '\n' + matrix_str
-    print(matrix_str)
+# def rows(matrix_str):
+#     row_count = 0
+#     row_string = ''
+#     for char in matrix_str:
+#         if char == ' ':
+#             continue
+#         print(char,row_count)
+#         if char == '\n':
+#             break
+#         row_count += 1
+#     print(row_count)
+#     for i in range(1, row_count +1):
+#         row_string += '{} '.format(str(i))
+#     matrix_str = row_string + '\n' + matrix_str
+#     print(matrix_str)
 
-    # def columns(matrix_str):
+#     def columns(matrix_str):
+#         column_str = ''
 
+class Matrix():
+    def __init__(self, matrix_string):
+        self.__matrix_rows = [[int(item) for item in row.split(' ')]
+                          for row in matrix_string.split('\n')]
+        self.__matrix_columns = \
+            [list(column) for column in zip(*self.__matrix_rows)] # merge row into column
+
+    def rows(self, row_list=[]):
+        for item in range(len(self.__matrix_rows)):
+            for character in self.__matrix_rows[item]:
+                row_list.append(character)
+            print(row_list)
+            return row_list
+
+    def columns(self, column_list=[]):
+        for item in range(len(self.__matrix_columns)):
+            for character in self.__matrix_columns[item]:
+                column_list.append(character)
+        print(column_list)
+        return column_list
 
 if __name__ == "__main__":
-    rows(input)
+    input = '9 8 7\n5 3 2\n6 6 7'
+    matrix = Matrix(input)
+    matrix.rows()
+    matrix.columns()
+
