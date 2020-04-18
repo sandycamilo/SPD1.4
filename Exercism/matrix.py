@@ -38,6 +38,31 @@
 
 
 # input string:
-print('9 8 7\n5 3 2\n6 6 7')
+# print('9 8 7\n5 3 2\n6 6 7')
 
 # understanding the problem: 
+# rows: identify len of first row by starting from the first index to the start of the next new line, then create your next row.
+# columns: identify and add a new column number after each new line defined by '\'.
+
+# pattern: 
+# '\' - indicates where row begins and ends 
+# counter from input 
+
+# write pseudocode:
+
+# rows:
+# set a counter for the number of characters before \n
+# check if char "\" exists in string
+# while char != '\'
+# return
+# create a string with the numbers at every other place in the range of counter
+# prepend this string to the matrix string
+
+# columns:
+# if first char, add 1 before string
+# else add 1 to counter
+# insert counter after \n
+
+
+
+
