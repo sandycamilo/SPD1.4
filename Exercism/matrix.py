@@ -94,14 +94,14 @@ class Matrix():
         self.__matrix_columns = \
             [list(column) for column in zip(*self.__matrix_rows)] # merge row into column
 
-    def rows(self, row_list=[]):
+    def row(self, row_list=[]):
         for item in range(len(self.__matrix_rows)):
             for character in self.__matrix_rows[item]:
                 row_list.append(character)
             print(row_list)
             return row_list
 
-    def columns(self, column_list=[]):
+    def column(self, column_list=[]):
         for item in range(len(self.__matrix_columns)):
             for character in self.__matrix_columns[item]:
                 column_list.append(character)
@@ -111,6 +111,6 @@ class Matrix():
 if __name__ == "__main__":
     input = '9 8 7\n5 3 2\n6 6 7'
     matrix = Matrix(input)
-    matrix.rows()
-    matrix.columns()
+    matrix.row()
+    # matrix.column()
 
