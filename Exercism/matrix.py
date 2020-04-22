@@ -110,6 +110,9 @@ class Matrix():
 
 if __name__ == "__main__":
     input = '9 8 7\n5 3 2\n6 6 7'
+    input = '6 6 7\n2 3 4'
+    input2 = ' '
+    input3 = '0.8, 8\n9 0 9'
     matrix = Matrix(input)
     matrix.row()
     # matrix.column()

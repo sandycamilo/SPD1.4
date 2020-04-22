@@ -41,4 +41,6 @@ def two_fer(name={}):
 
 
 print(two_fer('Sandy'))
+print(two_fer(' '))
+print(two_fer(1))
 print(two_fer())
