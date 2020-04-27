@@ -4,23 +4,13 @@
 # elements. That is, maximize a[i] + a[i+1] for some i.
 
 # Variable Table:
-
 # Variable : Value
+#  0  1  2  3  4  5
 # [7, 2, 5, 9, 3, 4]
-#
-#
-#
-
-
-# Variable table:
-# 0.  1. 2. 3    0. 1. 2. 3 
-# [1, 2, 3, 4], [1, 2, 7, 4]
-# Variable : Value
-# i = 2
-# len = 4 
-# array1 [i] = 3
-# array2 [i] = 7
-# continue, continue,False- function ends
+# i = 5 + 9 = 14
+# the_list[i] = 14
+# highest_pair = 9
+# continue, continue, return highest_pair
 
 def find_highest_pair(the_list):
   # Set it to lowest possible number

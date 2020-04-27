@@ -32,7 +32,3 @@ actual = arrays_identical([1, 2, 3, 4], [1, 2, 7, 4])
 expected = False
 
 print(f"Testing on {[1, 2, 3, 4]}, {[1, 2, 7, 4]}")
-if expected == actual:
-  print("✅ Passed!")
-else:
-  print(f"❌ Failed! Expected {expected}, got {actual}")
