@@ -14,10 +14,10 @@
 
 def find_highest_pair(the_list):
   # Set it to lowest possible number
-  highest_pair = float('-inf')
+  highest_pair = float('-inf') 
   
   # Loop over all indices in the list
-  for i in range(len(the_list)):
+  for i in range(len(the_list)-1):
     # For each index, see if the pair starting at index is higher
     # than highest we've seen so far
     if the_list[i] + the_list[i+1] > highest_pair:
@@ -26,7 +26,7 @@ def find_highest_pair(the_list):
   return highest_pair
   
 
-actual = find_highest_pair([7, 2, 5, 9, 3, 4])
-expected = 14
+print(find_highest_pair([7, 2, 5, 9, 3, 4]))
+print(find_highest_pair([17, 2, 105, 99, 1993, 4]))
+print(find_highest_pair([17.0, 00.2, 0.0105, 99, 0.4]))
 
-print(f"Testing on {[7, 2, 5, 9, 3, 4]}")
